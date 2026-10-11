@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Store</title>
+
+    <style>
+        body {
+            margin: 10px;
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Header section */
+        .header {
+            background-color: lightblue;
+            height: 135px;
+            border: 1px solid gray;
+        }
+
+        .logo {
+            float: left;
+            width: 100px;
+            height: 90px;
+            margin: 15px;
+            background-color: white;
+            border-radius: 12px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .logo-icon {
+            font-size: 48px;
+            color: #168bd2;
+        }
+
+        .header h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 25px 0 20px;
+        }
+
+        .nav {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Main layout */
+        .main {
+            display: flex;
+            height: 80vh;
+            min-height: 400px;
+            border: 1px solid gray;
+        }
+
+        /* Left sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: lightyellow;
+            border: 1px solid gray;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .sidebar a {
+            display: block;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0 25px;
+        }
+
+        /* Right content area */
+        .content {
+            flex: 1;
+            background-color: lightpink;
+            border: 1px solid gray;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .content h2 {
+            color: green;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .description {
+            font-size: 25px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .student {
+            font-size: 25px;
+            font-style: italic;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <div class="header">
+
+        <div class="logo">
+            <div class="logo-icon">▤</div>
+            <b>BOOK STORE</b>
+        </div>
+
+        <h1>ONLINE BOOK STORE</h1>
+
+        <div class="nav">
+            <a href="onlinestore.html">Home</a> |
+            <a href="login.html">Login</a> |
+            <a href="registration.html">Registration</a> |
+            <a href="catalogue.html">Catalogue</a> |
+            <a href="cart.html">Cart</a>
+        </div>
+
+    </div>
+
+    <!-- Main section -->
+    <div class="main">
+
+        <!-- Left sidebar -->
+        <div class="sidebar">
+            <a href="catalogue.html?branch=CSE">CSE</a>
+            <a href="catalogue.html?branch=ECE">ECE</a>
+            <a href="catalogue.html?branch=EEE">EEE</a>
+            <a href="catalogue.html?branch=CIVIL">CIVIL</a>
+        </div>
+
+        <!-- Right content -->
+        <div class="content">
+
+            <h2>ONLINE BOOK STORE INFORMATION</h2>
+
+            <p class="description">
+                Online book store is developed for students.
+                It contains book catalogue of various branches
+                like CSE, ECE, EEE, CIVIL.
+            </p>
+
+            <p class="student">
+                (Your Name = Ajay Singh,
+                Roll No = 2501920110047.)
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

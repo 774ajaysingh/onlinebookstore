@@ -1,0 +1,176 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Catalogue</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: "Times New Roman", serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        table {
+            width: 95%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+            font-size: 18px;
+        }
+
+        td {
+            font-size: 17px;
+        }
+
+        .book-cover {
+            width: 85px;
+            height: 110px;
+            border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            background-color: lightyellow;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 7px 12px;
+            background-color: lightblue;
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+
+        .nav {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ONLINE BOOK STORE - CATALOGUE</h1>
+
+    <div class="nav">
+        <a href="onlinestore.html">Home</a> |
+        <a href="login.html">Login</a> |
+        <a href="registration.html">Registration</a> |
+        <a href="catalogue.html">Catalogue</a> |
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <h2 style="text-align:center;">Available Books</h2>
+
+    <table>
+        <tr>
+            <th>Book Cover</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="book-cover">XML<br>BIBLE</div>
+            </td>
+            <td>XML Bible</td>
+            <td>Winston</td>
+            <td>Wiley</td>
+            <td>$40.50</td>
+            <td>
+                <button onclick="addToCart('XML Bible', 40.50)">
+                    Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="book-cover">ARTIFICIAL<br>INTELLIGENCE</div>
+            </td>
+            <td>Artificial Intelligence</td>
+            <td>S. Russell</td>
+            <td>Prentice Hall</td>
+            <td>$63.00</td>
+            <td>
+                <button onclick="addToCart('Artificial Intelligence', 63.00)">
+                    Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="book-cover">JAVA 2</div>
+            </td>
+            <td>Java 2</td>
+            <td>Watson</td>
+            <td>BPB Publications</td>
+            <td>$35.50</td>
+            <td>
+                <button onclick="addToCart('Java 2', 35.50)">
+                    Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="book-cover">HTML<br>IN 24 HOURS</div>
+            </td>
+            <td>HTML in 24 Hours</td>
+            <td>Sam Peter</td>
+            <td>Sam Publications</td>
+            <td>$50.00</td>
+            <td>
+                <button onclick="addToCart('HTML in 24 Hours', 50.00)">
+                    Add to Cart
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function addToCart(bookName, price) {
+            let cart = JSON.parse(
+                localStorage.getItem("bookCart") || "[]"
+            );
+
+            cart.push({
+                name: bookName,
+                price: price
+            });
+
+            localStorage.setItem(
+                "bookCart",
+                JSON.stringify(cart)
+            );
+
+            alert(bookName + " added to cart!");
+        }
+    </script>
+
+</body>
+</html>
+```
